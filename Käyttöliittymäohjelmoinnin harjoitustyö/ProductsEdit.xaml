@@ -1,0 +1,21 @@
+﻿<Window x:Class="Käyttöliittymäohjelmoinnin_harjoitustyö.ProductsEdit"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Käyttöliittymäohjelmoinnin_harjoitustyö"
+        mc:Ignorable="d"
+        Title="Tuotetietojen muokkaus" Height="200" Width="350" ResizeMode="NoResize">
+    <Canvas>
+        <Label Content="Tuote ID"/>
+        <Label Content="Malli" HorizontalAlignment="Center" Canvas.Top="25" VerticalAlignment="Top"/>
+        <Label Content="Määrä" HorizontalAlignment="Center" Canvas.Top="50" VerticalAlignment="Top"/>
+        <Label Content="Hinta" HorizontalAlignment="Center" Canvas.Top="77" VerticalAlignment="Top"/>
+        <TextBox  Text="{Binding ProductID}" Width="200" Height="20" Canvas.Left="100" Canvas.Top="3"/>
+        <TextBox  Text="{Binding Model}" Width="200" Height="20" Canvas.Left="100" Canvas.Top="28" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <TextBox  Text="{Binding Amount}" Width="200" Height="20" Canvas.Left="100" Canvas.Top="53" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <TextBox  Text="{Binding Price}" Width="200" Height="20" Canvas.Left="100" Canvas.Top="80" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Button Content="Tallenna" Canvas.Left="253" Canvas.Top="105" HorizontalAlignment="Left" VerticalAlignment="Center" Click="EditProdClick" />
+    </Canvas>
+
+</Window>

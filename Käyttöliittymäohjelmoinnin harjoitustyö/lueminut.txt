@@ -1,0 +1,15 @@
+Sovelluksen connection string yhteydet ovat määritetty seuraavasti:
+
+OrderEdit.xaml.cs luokan ominaisuus LocalWithDb
+DiscRepository.cs luokan ominaisuus localWithDb
+MainWindow.xaml.cs luokan ominaisuus LocalWithDb
+DeleteProduct.xaml.cs.luokan ominaisuus localWithDb
+DeleteCustomer.xaml.cs.luokan ominaisuus localWithDb
+DeleteOrder.xaml.cs.luokan ominaisuus localWithDb
+AddNewProduct.xaml.cs.luokan ominaisuus localWithDb
+AddNewOrder.xaml.cs.luokan ominaisuus localWithDb
+
+Kaikki ottavat siis yhtyeden samaan tietokantaan.
+
+Jotta ohjelma toimisi, MainWindow.xaml.cs luokan construktorissa on lista poluista. Polut täytyy muokata täsmäämään lähdekansiota. Tiedostot ovat samassa kansiossa xaml ja cs tiedostojen kanssa.
+

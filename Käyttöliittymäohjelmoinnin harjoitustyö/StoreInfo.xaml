@@ -1,0 +1,15 @@
+﻿<Window x:Class="Käyttöliittymäohjelmoinnin_harjoitustyö.StoreInfo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Käyttöliittymäohjelmoinnin_harjoitustyö"
+        mc:Ignorable="d"
+        Title="Kaupan tiedot" Height="110" Width="360" ResizeMode="NoResize">
+    <Grid>
+        <Label Content="Puhelinnumero" Margin="0,10,0,-10"/>
+        <Label Content="Sähköposti" Margin="0,33,0,-33"/>
+        <Label Content="feikki.sahkoposti@outlook.com" Margin="159,33,-159,-33"/>
+        <Label Content="+358123456789" Margin="159,10,-159,-10"/>
+    </Grid>
+</Window>

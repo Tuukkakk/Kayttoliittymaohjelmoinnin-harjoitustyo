@@ -1,0 +1,32 @@
+﻿<Window x:Class="Käyttöliittymäohjelmoinnin_harjoitustyö.OrderEdit"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Käyttöliittymäohjelmoinnin_harjoitustyö"
+        mc:Ignorable="d"
+        Title="Tilaksen tietojen muokkaus" Height="450" Width="800" ResizeMode="NoResize">
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="5*" />
+        </Grid.RowDefinitions>
+        <Label Content="Tilausnumero" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <Label Content="Asiakas ID" HorizontalAlignment="Left" Margin="10,62,0,0" VerticalAlignment="Top"/>
+        <Label Content="Päivämäärä." HorizontalAlignment="Left" Margin="10,36,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtOrderNro" HorizontalAlignment="Left" Margin="122,14,0,0" TextWrapping="Wrap" Text="{Binding OrderID}" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Margin="122,66,0,0" TextWrapping="Wrap" Text="{Binding CustomerID}" VerticalAlignment="Top" Width="120"/>
+        <DatePicker SelectedDate="{Binding OrderDate}" HorizontalAlignment="Left" Margin="122,37,0,0" VerticalAlignment="Top" Width="120" SelectedDateFormat="Short"/>
+        <DataGrid x:Name="dgOrders" Grid.Row="1" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Tuote ID" IsReadOnly="False" Width="60" Binding="{Binding ProductID}"/>
+                <DataGridTextColumn Header="Malli" IsReadOnly="True" Width="200" Binding="{Binding Model}"/>
+                <DataGridTextColumn Header="Määrä" Width="60" Binding="{Binding Amount}"/>
+                <DataGridTextColumn Header="Hinta" Width="60" Binding="{Binding Price}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Content="Tallenna" HorizontalAlignment="Left" Margin="727,99,0,0" VerticalAlignment="Top" Click="SaveEditOrder" />
+        <Button Content="Hae" HorizontalAlignment="Left" Margin="260,13,0,0" VerticalAlignment="Top" Width="46" Click="refreshProductsEdit" />
+    </Grid>
+</Window>

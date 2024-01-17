@@ -1,0 +1,96 @@
+﻿<Window x:Class="Käyttöliittymäohjelmoinnin_harjoitustyö.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Käyttöliittymäohjelmoinnin_harjoitustyö"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="700">
+
+    
+    <Grid>
+        <Menu>
+            <MenuItem Header="Kaupan tiedot" Height="25" Click="OpenStoreInfo" />
+            <MenuItem Header="About">
+                <MenuItem Header="Version..." Click="VersionClick" />
+            </MenuItem>
+            <Button Width="93" Height="24" Content="Coming soon..." Click="openImagesClick" />
+        </Menu>
+
+        <TabControl Margin="0,25,0,0">
+            <TabItem Header="Tuotteet">
+                <Grid Height="365" Margin="0,-20,0,0">
+
+                    <DataGrid x:Name="dgProducts" Grid.Row="1" AutoGenerateColumns="False">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="ID" IsReadOnly="True" Width="40" Binding="{Binding ProductID}"/>
+                            <DataGridTextColumn Header="Tuotetyyppi" Width="250" Binding="{Binding Model}"/>
+                            <DataGridTextColumn Header="Saatavuus" Width="110" Binding="{Binding Amount}"/>
+                            <DataGridTextColumn Header="Hinta" Width="110" Binding="{Binding Price}"/>
+                        </DataGrid.Columns>
+
+                    </DataGrid>
+                    <StackPanel Margin="0,370,0,-36" Orientation="Horizontal">
+                        <Button Content="Muuta tuotteen tietoja" Width="138" Height="26" Click="EditProduct"/>
+                        <Button Content="Lisää tuote" Width="137" Height="26" Click="AddProduct"/>
+                        <Button Content="Päivitä" Width="137" Height="26" Click="BringProducts"/>
+                        <Button Content="Poista tuote" Width="131" Height="26" Click="DeleteProductClick" />
+
+                    </StackPanel>
+                </Grid>
+
+            </TabItem>
+            <TabItem Header="Tilaukset" HorizontalAlignment="Left" Width="58">
+                <Grid Height="365" Margin="0,-20,0,0" RenderTransformOrigin="0.499,0.523">
+
+
+                    <DataGrid x:Name="dgOrders" AutoGenerateColumns="True" Margin="0,38,0,31">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="TilausID" IsReadOnly="True" Width="40" Binding="{Binding OrderID}"/>
+                            <DataGridTextColumn Header="Tilaus pvm" Width="110" Binding="{Binding OrderDate}"/>
+                            <DataGridTextColumn Header="Asiakas" Width="110" Binding="{Binding Name}"/>
+                            <DataGridTextColumn Header="Yhteissumma" Width="110" Binding="{Binding Total}"/>
+
+                        </DataGrid.Columns>
+
+                    </DataGrid>
+                    
+                    <StackPanel Margin="0,370,0,-36" Orientation="Horizontal">
+
+                        <Button Content="Muuta tilauksen tietoja" Width="131" Height="26" Click="EditOrder" />
+                        <Button Content="Lisää uusi tilaus" Width="131" Height="26" Click="AddOrder" />
+                        <Button Content="Päivitä" Width="131" Height="26" Click="BringOrders" />
+                        <Button Content="Poista tilaus" Width="131" Height="26" Click="DeleteOrderClick" />
+                        
+                    </StackPanel>
+                </Grid>
+
+
+            </TabItem>
+            <TabItem Header="Asiakkaat">
+                <Grid Height="365" Margin="0,-20,0,0">
+                    <DataGrid x:Name="dgCustomers" Grid.Row="1" AutoGenerateColumns="False">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="ID" IsReadOnly="True" Width="40" Binding="{Binding CustomerID}"/>
+                            <DataGridTextColumn Header="Nimi" Width="110" Binding="{Binding Name}"/>
+                            <DataGridTextColumn Header="Osoite" Width="110" Binding="{Binding StreetAddress}"/>
+                            <DataGridTextColumn Header="Postinumero" Width="110" Binding="{Binding PostalCode}"/>
+                            <DataGridTextColumn Header="Kaupunki" Width="110" Binding="{Binding City}"/>
+
+                        </DataGrid.Columns>
+
+                    </DataGrid>
+                    <StackPanel Margin="23,370,-23,-36" Orientation="Horizontal">
+
+                        <Button Content="Muuta asiakkaan tietoja" Width="136" Height="26" Click="EditCustomer"/>
+                        <Button Content="Lisää uusi asiakas" Width="136" Height="26" Click="AddCustomer"/>
+                        <Button Content="Päivitä" Width="137" Height="26" Click="BringCus"/>
+                        <Button Content="Poista asiakas" Width="131" Height="26" Click="DeleteCustomerClick" />
+
+                    </StackPanel>
+                </Grid>
+
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>

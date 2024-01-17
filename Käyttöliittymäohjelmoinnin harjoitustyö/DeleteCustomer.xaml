@@ -1,0 +1,14 @@
+﻿<Window x:Class="Käyttöliittymäohjelmoinnin_harjoitustyö.DeleteCustomer"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Käyttöliittymäohjelmoinnin_harjoitustyö"
+        mc:Ignorable="d"
+        Title="Poista asiakas" Height="100" Width="240" ResizeMode="NoResize">
+    <Canvas>
+        <Label Content="Syötä asiakasnumero minkä haluat poistaa" HorizontalAlignment="Center" Canvas.Top="10" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtCustomerID" HorizontalAlignment="Left" VerticalAlignment="Top" Width="76" Canvas.Left="6" Canvas.Top="36"/>
+        <Button Content="Poista" Height="18" Width="45" Canvas.Left="87" Canvas.Top="36" HorizontalAlignment="Center" VerticalAlignment="Center" Click="DeleteCustomerClick" />
+    </Canvas>
+</Window>
