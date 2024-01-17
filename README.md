@@ -1,0 +1,1 @@
+Tämä sovellus oli käyttöliittymäohjelmoinnin harjoitustyö. Päätin työn aiheeksi frisbeegolf kiekkokaupan hallintasovelluksen. Sovelluksella pystyy lisäämään, muokkaamaan ja poistamaan tuotteita, tilauksia ja asiakkaita. 
